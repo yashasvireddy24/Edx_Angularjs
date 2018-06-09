@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<head>
+    <title>Angular Fundamentals</title>
+
+</head>
+
+<body>
+
+    <div ng-app="timeapp" ng-controller="timeCtrl">
+        <h1> Angular </h1>
+        <h1>Current time is:</h1>
+        {{day | date}}
+    </div>
+        <script>
+            var timeapp = angular.module('timeapp', []);
+            timeapp.controller('timeCtrl', function ($scope) {
+                $scope.day = new Date();
+            });
+        </script>
+</body>
+
+</html>
